@@ -1,0 +1,223 @@
+/*html {
+    scroll-behavior: smooth;
+  } too fast at the moment, see if it works when pictures are smaller!*/
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+    font-family:'Heebo', 'Arial', 'Sans Serif';
+    color: #25281F;
+    font-weight: 400;
+    padding-top: 145px;
+}
+
+@media screen and (max-width: 737px){
+    body {
+        padding-top: 191px;
+    }
+}   
+
+a {
+    text-decoration: none;
+    color: #25281F;
+}
+
+.JHlogo {
+    color: #25281F;
+    font-family: 'Domine', 'Georgia', 'serif';
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.projectTitle {
+    font-size: 1.5rem;
+    font-family: 'Domine', 'Georgia', 'serif';
+    font-weight: 600;
+    text-align: center;
+}
+
+.navbar, .navbar-brand {
+    padding: 0 0 0 0!important; 
+}
+
+.myNavigationContainer {
+    background-color: #BBDDEC;
+}
+
+.navbarContainer {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2.0625em;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #BBDDEC;
+    background-color: #25281F;
+    font-weight: 500;
+}
+
+a.nav-link:hover {
+    font-weight: 500;
+    color: #25281F;
+}
+
+#processNavigation {
+    margin-top: 0.5em; 
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    font-size: 1.25rem;
+    
+}
+
+#content1, #content2, #content3, #content4, #content5, #content6 {
+    scroll-margin-top: 120px;
+}
+
+@media screen and (max-width: 737px){
+    #content1, #content2, #content3, #content4, #content5, #content6 {
+        scroll-margin-top: 150px;
+    }
+}
+
+
+.processSectionContainer {
+    width: 90%;
+    margin: 0 auto;
+    padding: 4em 0 2em 0;
+}
+
+.processSectionContent {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.imageCaption {
+    font-style: italic;
+    text-align: center;
+}
+
+.caseStudyContent h1 {
+    font-family: 'Domine', 'Georgia', 'serif';
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.caseStudyContent p {
+    font-size: 1rem;
+}
+
+.caseStudyContent h2 {
+    font-size: 2.25rem;
+    margin-bottom: 0.5em;
+    font-weight: 500;
+    text-align: center;
+}
+
+.caseStudyContent h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    max-width: 800px;
+}
+
+.takeawayContainer {
+    background-color: #F3B56C;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.takeawayContent {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 800px;
+    padding-top: 1.875rem;
+}
+
+.CaseStudyCTAButtonContainer {
+    display: flex;
+    gap: 4em;
+    margin-bottom: 2em;
+}
+
+@media screen and (max-width: 600px) {
+    .CaseStudyCTAButtonContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 3em;
+    }
+}
+
+.CaseStudyCTAButtonContainer a {
+    text-decoration: none;
+    color: #25281F;
+}
+
+.CaseStudyCTAButtonContainer button {
+    font-family: 'Heebo', 'Arial', 'Sans Serif';
+    font-size: 1.5rem;
+    background-color: #F3B56C;
+    border: 0;
+    border-radius: 10px;
+    padding: 0.5em 1.5em;
+    transition: 02.s;
+}
+
+.CaseStudyCTAButtonContainer button:hover {
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.875em;
+    padding: 3.125em 0 2.1875em 0;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+}
+
+.footerIconsContainer {
+    display: flex;
+    gap: 1.875em;
+    width: 100%;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.copyrightTextContainer {
+    display: flex;
+    justify-content: center;
+    font-family: 'Heebo', 'Arial', 'Sans Serif';
+    font-size: 0.75rem;
+    color: #25281F;
+}
+
+.copyrightTextContainer p {
+    margin: 0;
+}
+
+.closeButton {
+    padding-top: 0.5rem;
+    padding-right: 0.65rem;
+    align-items: end;
+}
+
+#imgViewer::-webkit-scrollbar {
+    -webkit-appearance: none;
+    height: 10px;
+}
+#imgViewer::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgba(0,0,0,.5);
+    box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
