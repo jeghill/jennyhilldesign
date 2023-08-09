@@ -33,7 +33,6 @@ a {
 
 .projectTitle {
     font-size: 1.5rem;
-    font-family: 'Domine', 'Georgia', 'serif';
     font-weight: 600;
     text-align: center;
 }
@@ -101,9 +100,7 @@ a.nav-link:hover {
 }
 
 .caseStudyContent h1 {
-    font-family: 'Domine', 'Georgia', 'serif';
     font-size: 3rem;
-    font-weight: 700;
 }
 
 .caseStudyContent p {
