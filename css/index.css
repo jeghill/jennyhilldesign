@@ -83,7 +83,6 @@ nav {
 #activePage {
     font-weight: 600;
     border-bottom: 3px solid #25281F;
-    cursor: not-allowed;
 }
 
 .primaryNavigationContainer a:hover {
