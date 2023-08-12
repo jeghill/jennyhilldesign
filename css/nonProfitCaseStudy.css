@@ -69,7 +69,8 @@ a.nav-link:hover {
     margin-right: auto;
     width: 90%;
     font-size: 1.25rem;
-    
+    text-decoration: none;
+    color: #25281F;
 }
 
 #content1, #content2, #content3, #content4, #content5, #content6 {
@@ -174,7 +175,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1.875em;
+    gap: 1.875em; 
     padding: 3.125em 0 2.1875em 0;
 }
 
@@ -186,7 +187,6 @@ footer {
 .footerIconsContainer {
     display: flex;
     gap: 1.875em;
-    width: 100%;
     justify-content: center;
     text-decoration: none;
 }
@@ -217,4 +217,8 @@ footer {
     border-radius: 5px;
     background-color: rgba(0,0,0,.5);
     box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+#content5 a {
+    text-decoration: underline;
 }
