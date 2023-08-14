@@ -13,684 +13,47 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!--Notion generated syle-->
     <style>
-        /* cspell:disable-file */
-        /* webkit printing magic: print all background colors */
-        html {
-            -webkit-print-color-adjust: exact;
+        #warningText {
+            width: 80%;
+            max-width: 800px;
+            margin: 1.8em auto 4em;
+            background-color: #F3B56C;
+            padding: 1em 1.8em;
         }
-        * {
-            box-sizing: border-box;
-            -webkit-print-color-adjust: exact;
-        }
-        
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-        }
-        @media only screen {
-            body {
-                /*margin: 2em auto;*/
-                max-width: 900px;
-                color: rgb(55, 53, 47);
-            }
-        }
-        
-        body {
-            line-height: 1.5;
-            white-space: pre-wrap;
-        }
-        
-        a,
-        a.visited {
-            color: inherit;
+
+        #warningText a {
             text-decoration: underline;
         }
-        
-        .pdf-relative-link-path {
-            font-size: 80%;
-            color: #444;
-        }
-        
-        h1,
-        h2,
-        h3 {
-            letter-spacing: -0.01em;
-            line-height: 1.2;
-            font-weight: 600;
-            margin-bottom: 0;
-        }
-        
-        .page-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-top: 0;
-            margin-bottom: 0.75em;
-        }
-        
-        h1 {
-            font-size: 1.875rem;
-            margin-top: 1.875rem;
-        }
-        
-        h2 {
-            font-size: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        
-        h3 {
-            font-size: 1.25rem;
-            margin-top: 1.25rem;
-        }
-        
-        .source {
-            border: 1px solid #ddd;
-            border-radius: 3px;
-            padding: 1.5em;
-            word-break: break-all;
-        }
-        
-        .callout {
-            border-radius: 3px;
-            padding: 1rem;
-        }
-        
-        figure {
-            margin: 1.25em 0;
-            page-break-inside: avoid;
-        }
-        
-        figcaption {
-            opacity: 0.5;
-            font-size: 85%;
-            margin-top: 0.5em;
-        }
-        
-        mark {
-            background-color: transparent;
-        }
-        
-        .indented {
-            padding-left: 1.5em;
-        }
-        
-        hr {
-            background: transparent;
-            display: block;
-            width: 100%;
-            height: 1px;
-            visibility: visible;
-            border: none;
-            border-bottom: 1px solid rgba(55, 53, 47, 0.09);
-        }
-        
-        img {
-            max-width: 100%;
-        }
-        
-        @media only print {
-            img {
-                max-height: 100vh;
-                object-fit: contain;
-            }
-        }
-        
-        @page {
-            margin: 1in;
-        }
-        
-        .collection-content {
-            font-size: 0.875rem;
-        }
-        
-        .column-list {
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        .column {
-            padding: 0 1em;
-        }
-        
-        .column:first-child {
-            padding-left: 0;
-        }
-        
-        .column:last-child {
-            padding-right: 0;
-        }
-        
-        .table_of_contents-item {
-            display: block;
-            font-size: 0.875rem;
-            line-height: 1.3;
-            padding: 0.125rem;
-        }
-        
-        .table_of_contents-indent-1 {
-            margin-left: 1.5rem;
-        }
-        
-        .table_of_contents-indent-2 {
-            margin-left: 3rem;
-        }
-        
-        .table_of_contents-indent-3 {
-            margin-left: 4.5rem;
-        }
-        
-        .table_of_contents-link {
-            text-decoration: none;
-            opacity: 0.7;
-            border-bottom: 1px solid rgba(55, 53, 47, 0.18);
-        }
-        
-        table,
-        th,
-        td {
-            border: 1px solid rgba(55, 53, 47, 0.09);
-            border-collapse: collapse;
-        }
-        
-        table {
-            border-left: none;
-            border-right: none;
-        }
-        
-        th,
-        td {
-            font-weight: normal;
-            padding: 0.25em 0.5em;
-            line-height: 1.5;
-            min-height: 1.5em;
-            text-align: left;
-        }
-        
-        th {
-            color: rgba(55, 53, 47, 0.6);
-        }
-        
-        ol,
-        ul {
-            margin: 0;
-            margin-block-start: 0.6em;
-            margin-block-end: 0.6em;
-        }
-        
-        li > ol:first-child,
-        li > ul:first-child {
-            margin-block-start: 0.6em;
-        }
-        
-        ul > li {
-            list-style: disc;
-        }
-        
-        ul.to-do-list {
-            padding-inline-start: 0;
-        }
-        
-        ul.to-do-list > li {
-            list-style: none;
-        }
-        
-        .to-do-children-checked {
-            text-decoration: line-through;
-            opacity: 0.375;
-        }
-        
-        ul.toggle > li {
-            list-style: none;
-        }
-        
-        ul {
-            padding-inline-start: 1.7em;
-        }
-        
-        ul > li {
-            padding-left: 0.1em;
-        }
-        
-        ol {
-            padding-inline-start: 1.6em;
-        }
-        
-        ol > li {
-            padding-left: 0.2em;
-        }
-        
-        .mono ol {
-            padding-inline-start: 2em;
-        }
-        
-        .mono ol > li {
-            text-indent: -0.4em;
-        }
-        
-        .toggle {
-            padding-inline-start: 0em;
-            list-style-type: none;
-        }
-        
-        /* Indent toggle children */
-        .toggle > li > details {
-            padding-left: 1.7em;
-        }
-        
-        .toggle > li > details > summary {
-            margin-left: -1.1em;
-        }
-        
-        .selected-value {
-            display: inline-block;
-            padding: 0 0.5em;
-            background: rgba(206, 205, 202, 0.5);
-            border-radius: 3px;
-            margin-right: 0.5em;
-            margin-top: 0.3em;
-            margin-bottom: 0.3em;
-            white-space: nowrap;
-        }
-        
-        .collection-title {
-            display: inline-block;
-            margin-right: 1em;
-        }
-        
-        .page-description {
-            margin-bottom: 2em;
-        }
-        
-        .simple-table {
-            margin-top: 1em;
-            font-size: 0.875rem;
-            empty-cells: show;
-        }
-        .simple-table td {
-            height: 29px;
-            min-width: 120px;
-        }
-        
-        .simple-table th {
-            height: 29px;
-            min-width: 120px;
-        }
-        
-        .simple-table-header-color {
-            background: rgb(247, 246, 243);
-            color: black;
-        }
-        .simple-table-header {
-            font-weight: 500;
-        }
-        
-        time {
-            opacity: 0.5;
-        }
-        
-        .icon {
-            display: inline-block;
-            max-width: 1.2em;
-            max-height: 1.2em;
-            text-decoration: none;
-            vertical-align: text-bottom;
-            margin-right: 0.5em;
-        }
-        
-        img.icon {
-            border-radius: 3px;
-        }
-        
-        .user-icon {
-            width: 1.5em;
-            height: 1.5em;
-            border-radius: 100%;
-            margin-right: 0.5rem;
-        }
-        
-        .user-icon-inner {
-            font-size: 0.8em;
-        }
-        
-        .text-icon {
-            border: 1px solid #000;
-            text-align: center;
-        }
-        
-        .page-cover-image {
-            display: block;
-            object-fit: cover;
-            width: 100%;
-            max-height: 30vh;
-        }
-        
-        .page-header-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .page-header-icon-with-cover {
-            margin-top: -0.72em;
-            margin-left: 0.07em;
-        }
-        
-        .page-header-icon img {
-            border-radius: 3px;
-        }
-        
-        .link-to-page {
-            margin: 1em 0;
-            padding: 0;
-            border: none;
-            font-weight: 500;
-        }
-        
-        p > .user {
-            opacity: 0.5;
-        }
-        
-        td > .user,
-        td > time {
-            white-space: nowrap;
-        }
-        
-        input[type="checkbox"] {
-            transform: scale(1.5);
-            margin-right: 0.6em;
-            vertical-align: middle;
-        }
-        
-        p {
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
-        }
-        
-        .image {
-            border: none;
-            margin: 1.5em 0;
-            padding: 0;
-            border-radius: 0;
-            text-align: center;
-        }
-        
-        .code,
-        code {
-            background: rgba(135, 131, 120, 0.15);
-            border-radius: 3px;
-            padding: 0.2em 0.4em;
-            border-radius: 3px;
-            font-size: 85%;
-            tab-size: 2;
-        }
-        
-        code {
-            color: #eb5757;
-        }
-        
-        .code {
-            padding: 1.5em 1em;
-        }
-        
-        .code-wrap {
-            white-space: pre-wrap;
-            word-break: break-all;
-        }
-        
-        .code > code {
-            background: none;
-            padding: 0;
-            font-size: 100%;
-            color: inherit;
-        }
-        
-        blockquote {
-            font-size: 1.25em;
-            margin: 1em 0;
-            padding-left: 1em;
-            border-left: 3px solid rgb(55, 53, 47);
-        }
-        
-        .bookmark {
-            text-decoration: none;
-            max-height: 8em;
-            padding: 0;
-            display: flex;
-            width: 100%;
-            align-items: stretch;
-        }
-        
-        .bookmark-title {
-            font-size: 0.85em;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            height: 1.75em;
-            white-space: nowrap;
-        }
-        
-        .bookmark-text {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .bookmark-info {
-            flex: 4 1 180px;
-            padding: 12px 14px 14px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        
-        .bookmark-image {
-            width: 33%;
-            flex: 1 1 180px;
-            display: block;
-            position: relative;
-            object-fit: cover;
-            border-radius: 1px;
-        }
-        
-        .bookmark-description {
-            color: rgba(55, 53, 47, 0.6);
-            font-size: 0.75em;
-            overflow: hidden;
-            max-height: 4.5em;
-            word-break: break-word;
-        }
-        
-        .bookmark-href {
-            font-size: 0.75em;
-            margin-top: 0.25em;
-        }
-        
-        .sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
-        .code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
-        .serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
-        .mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
-        .pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
-        .pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
-        .pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
-        .pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
-        .pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-        .pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-        .pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-        .pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-        .pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
-        .pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
-        .pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
-        .pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
-        .pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-        .pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-        .pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-        .pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-        .highlight-default {
-            color: rgba(55, 53, 47, 1);
-        }
-        .highlight-gray {
-            color: rgba(120, 119, 116, 1);
-            fill: rgba(120, 119, 116, 1);
-        }
-        .highlight-brown {
-            color: rgba(159, 107, 83, 1);
-            fill: rgba(159, 107, 83, 1);
-        }
-        .highlight-orange {
-            color: rgba(217, 115, 13, 1);
-            fill: rgba(217, 115, 13, 1);
-        }
-        .highlight-yellow {
-            color: rgba(203, 145, 47, 1);
-            fill: rgba(203, 145, 47, 1);
-        }
-        .highlight-teal {
-            color: rgba(68, 131, 97, 1);
-            fill: rgba(68, 131, 97, 1);
-        }
-        .highlight-blue {
-            color: rgba(51, 126, 169, 1);
-            fill: rgba(51, 126, 169, 1);
-        }
-        .highlight-purple {
-            color: rgba(144, 101, 176, 1);
-            fill: rgba(144, 101, 176, 1);
-        }
-        .highlight-pink {
-            color: rgba(193, 76, 138, 1);
-            fill: rgba(193, 76, 138, 1);
-        }
-        .highlight-red {
-            color: rgba(212, 76, 71, 1);
-            fill: rgba(212, 76, 71, 1);
-        }
-        .highlight-gray_background {
-            background: rgba(241, 241, 239, 1);
-        }
-        .highlight-brown_background {
-            background: rgba(244, 238, 238, 1);
-        }
-        .highlight-orange_background {
-            background: rgba(251, 236, 221, 1);
-        }
-        .highlight-yellow_background {
-            background: rgba(251, 243, 219, 1);
-        }
-        .highlight-teal_background {
-            background: rgba(237, 243, 236, 1);
-        }
-        .highlight-blue_background {
-            background: rgba(231, 243, 248, 1);
-        }
-        .highlight-purple_background {
-            background: rgba(244, 240, 247, 0.8);
-        }
-        .highlight-pink_background {
-            background: rgba(249, 238, 243, 0.8);
-        }
-        .highlight-red_background {
-            background: rgba(253, 235, 236, 1);
-        }
-        .block-color-default {
-            color: inherit;
-            fill: inherit;
-        }
-        .block-color-gray {
-            color: rgba(120, 119, 116, 1);
-            fill: rgba(120, 119, 116, 1);
-        }
-        .block-color-brown {
-            color: rgba(159, 107, 83, 1);
-            fill: rgba(159, 107, 83, 1);
-        }
-        .block-color-orange {
-            color: rgba(217, 115, 13, 1);
-            fill: rgba(217, 115, 13, 1);
-        }
-        .block-color-yellow {
-            color: rgba(203, 145, 47, 1);
-            fill: rgba(203, 145, 47, 1);
-        }
-        .block-color-teal {
-            color: rgba(68, 131, 97, 1);
-            fill: rgba(68, 131, 97, 1);
-        }
-        .block-color-blue {
-            color: rgba(51, 126, 169, 1);
-            fill: rgba(51, 126, 169, 1);
-        }
-        .block-color-purple {
-            color: rgba(144, 101, 176, 1);
-            fill: rgba(144, 101, 176, 1);
-        }
-        .block-color-pink {
-            color: rgba(193, 76, 138, 1);
-            fill: rgba(193, 76, 138, 1);
-        }
-        .block-color-red {
-            color: rgba(212, 76, 71, 1);
-            fill: rgba(212, 76, 71, 1);
-        }
-        .block-color-gray_background {
-            background: rgba(241, 241, 239, 1);
-        }
-        .block-color-brown_background {
-            background: rgba(244, 238, 238, 1);
-        }
-        .block-color-orange_background {
-            background: rgba(251, 236, 221, 1);
-        }
-        .block-color-yellow_background {
-            background: rgba(251, 243, 219, 1);
-        }
-        .block-color-teal_background {
-            background: rgba(237, 243, 236, 1);
-        }
-        .block-color-blue_background {
-            background: rgba(231, 243, 248, 1);
-        }
-        .block-color-purple_background {
-            background: rgba(244, 240, 247, 0.8);
-        }
-        .block-color-pink_background {
-            background: rgba(249, 238, 243, 0.8);
-        }
-        .block-color-red_background {
-            background: rgba(253, 235, 236, 1);
-        }
-        .select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
-        .select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
-        .select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
-        .select-value-color-green { background-color: rgba(219, 237, 219, 1); }
-        .select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
-        .select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
-        .select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
-        .select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
-        .select-value-color-red { background-color: rgba(255, 226, 221, 1); }
-        .select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
-        .select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
-        .select-value-color-pageGlass { background-color: undefined; }
-        .select-value-color-washGlass { background-color: undefined; }
-        
-        .checkbox {
-            display: inline-flex;
-            vertical-align: text-bottom;
-            width: 16;
-            height: 16;
-            background-size: 16px;
-            margin-left: 2px;
-            margin-right: 5px;
-        }
-        
-        .checkbox-on {
-            background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
-        }
-        
-        .checkbox-off {
-            background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
-        }
-            
-        </style>
 
+        #frameBorder {
+            background-color: #BBDDEC;
+            padding: 4em 0;
+        }
+
+        .CaseStudyCTAButtonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+    margin: 2em auto 2em;
+}
+
+@media screen and (max-width: 600px) {
+    .CaseStudyCTAButtonContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 3em;
+    }
+}
+
+#thankYouText {
+    font: 500 1.25rem 'Heebo', 'Arial', 'Sans Serif';
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+    </style>
 </head>
 <body>
     <!--Navigation-->
@@ -721,55 +84,32 @@
             </ul>
         </div>
     </nav>
-    <!--Notion generated code from my webpage: https://www.notion.so/Government-Website-Redesign-feeca5490e074e55b6ca02fe568226ac?pvs=4-->
-    <article id="feeca549-0e07-4e55-b6ca-02fe568226ac" class="page sans"><header><img class="page-cover-image" src="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/White_Modern_Fashion_Newspaper_Tumblr_Banner.png" style="object-position:center 50%"/><h1 class="page-title">Government Website Redesign</h1><p class="page-description"></p></header><div class="page-body"><p id="79da05a1-e168-4cdf-b62b-75d965afec25" class="">I am currently updating my portfolio and am yet to convert this page from its orginial notion format to my website styling. Please come back soon to see the updated case study style!</p><p id="ba886c8b-1013-42d8-bba3-fea43bba959d" class="">
-    </p><blockquote id="553cb9f3-4589-4e1e-b0b4-a2f35f4f8283" class="">A project where I improved the usability of the CBC-Radio Canada desktop and mobile Website.</blockquote><p id="6a3f7a64-bb65-463e-a7df-26f6f3d1d84c" class="">
-    </p><p id="abca7c88-9be3-4c92-adb1-bd0700b2783c" class=""><strong>Problem:</strong> The CBC-Canada Radio website, which is aimed at prospective employees, has some usability and responsive web design issues.</p><p id="e36265b8-4e5c-4f74-88cf-c51fd4a63f0f" class="">
-    </p><p id="d2cd1166-95c7-43c6-8da8-c841def9a513" class=""><strong>Solution: </strong>Redesign the Information architecture and page content to make the website more user-friendly. </p><p id="4af4b1cd-0799-4a95-8dee-a5c2ccd9e738" class="">
-    </p><p id="d85d0611-b611-4186-a39b-f162950b841d" class=""><strong><strong><strong><strong><strong><strong><strong><strong>My Role: </strong></strong></strong></strong></strong></strong></strong></strong>I had one partner whom I collaborated with for the initial UI research and analysis. I completed the information architecture and redesign and testing individually.</p><p id="34686234-56c0-430d-b9df-338ffa955c2f" class="">
-    </p><p id="22a5dca8-f584-40a5-978b-0b6db31ce691" class=""><strong><strong><strong><strong>Process:</strong></strong></strong></strong></p><div id="111310bd-6233-4a2f-8519-4862d7625ec8" class="column-list"><div id="952d49c8-cf4f-402b-8862-ec4cc93a38c2" style="width:100%" class="column"><p id="a6de3c92-57ea-476d-bb43-1a5869d667b2" class=""><a href="https://www.notion.so/Government-Website-Redesign-feeca5490e074e55b6ca02fe568226ac?pvs=21">UI Research and Analysis</a></p><p id="baf05890-d9b9-4979-adf3-eb88e932efd0" class="">
-    </p></div><div id="9100d702-d1e5-4aff-8644-8818e7f6bd32" style="width:100%" class="column"><p id="9a1544fe-545c-4eac-876d-0a33a656b8d3" class=""><a href="https://www.notion.so/Government-Website-Redesign-feeca5490e074e55b6ca02fe568226ac?pvs=21">Information Architecture</a></p><p id="f0cf126a-9989-4577-aec0-2e7b9b0ca09c" class="">
-    </p></div><div id="b005945b-c533-4e69-883a-9e5f4af4444e" style="width:100%" class="column"><p id="6d1a7c80-4f89-474b-800b-e0a6ed400cba" class=""><a href="https://www.notion.so/Government-Website-Redesign-feeca5490e074e55b6ca02fe568226ac?pvs=21">Redesign and Testing</a></p><p id="099bc699-925c-4731-ad88-920f58ac9009" class="">
-    </p></div><div id="cd48eaa1-3c0a-4073-a685-16b21a11c440" style="width:100%" class="column"><p id="26c3352a-cff7-4cb0-84b3-51edcf53a90e" class=""><a href="https://www.notion.so/Government-Website-Redesign-feeca5490e074e55b6ca02fe568226ac?pvs=21">Conclusion</a></p><p id="6cc224d4-a554-483e-8791-1e7bac965c2f" class="">
-    </p></div></div><h2 id="207391e5-0b67-4e4c-b9b4-04b8f7cc37f3" class="">UI Research and Analysis</h2><hr id="5b2b0a28-a95e-489e-ab2d-6a2a78786811"/><h3 id="de90b9f2-1460-470b-b151-a06299c22ea6" class="">Proto-Persona</h3><p id="4ab3f350-1aeb-4097-8371-b661cce84afb" class="">To begin the project we created a proto-persona, Jacob, whom we imagined was the typical website user. We mapped out his behavioural demographics, goals, needs, pain points and some potential solutions to his frustrations so we could keep the end user in mind when researching and designing the website. </p><figure id="951ad4c5-8d55-42c9-a01c-879fc4312ceb" class="image"><a href="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/image-2.png"><img style="width:2000px" src="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/image-2.png"/></a></figure><p id="ca9c4804-d477-4925-9bf5-cffc67aeda2f" class=""><em>Jacob Eastmon, the proto-persona created as the typical website user. </em></p><p id="a4c5f022-b614-477d-80e8-2caee37cf934" class="">
-    </p><h3 id="77a2e7c7-dd86-4552-922d-01941c8311fc" class="">Needs Statement</h3><p id="2f08c9a7-6441-4097-b4d0-5173f8300223" class="">We then created a statement describing why Jacob visits the website from the proto-persona.</p><p id="a12549be-75d3-4f37-aa70-b688b6f53204" class="">
-    </p><blockquote id="2e6d27bc-e264-487d-b135-6720611732d2" class="">Jacob is looking for a new job as a news producer because he doesn&#x27;t feel supported by his colleagues at his current local news outlet and hates that they focus on fake news and clickbait headlines.
-    
-    He is researching prospective employers and wants to find out about their values, the company’s history and what the current employees are like to see if CBC-Canada Radio is a place he would like to work.</blockquote><p id="c2c3dfa4-8c21-488e-ac95-6fd0de130b98" class="">
-    </p><h3 id="60c6773d-036d-4458-b580-816d131f2675" class="">User Path</h3><p id="8a290431-7816-4e49-8385-f210b859407c" class="">Using the needs statement, we identified four goals Jacob wants to achieve when on the website and mapped out the path he would take to achieve these goals.</p><div id="881a7453-c4c8-45d4-897b-dab1654aab9c" class="column-list"><div id="95982d76-597e-400b-a5e4-48e3d487b200" style="width:25%" class="column"><p id="4b5cb066-3245-4da8-b924-cab01b5520b8" class=""><strong>Goal 1</strong></p><p id="655df43f-a12b-4a34-a76c-6b30ac0b9ffa" class="">What current job opportunities are available?</p></div><div id="ac8bfed2-2aed-497e-85bd-c09c5e55d962" style="width:25%" class="column"><p id="d0853fba-5476-4a68-9667-5bd9c3004523" class=""><strong>Goal 2</strong></p><p id="81a6ddd4-ce99-40c3-b742-e953ef170093" class="">Find out about the company’s history.</p></div><div id="6e6cd8cd-7b32-40ea-9158-b7effa53278f" style="width:25%" class="column"><p id="4b82a83a-b5d6-45c5-b15c-d3a84065bb9b" class=""><strong>Goal 3</strong></p><p id="41de780b-cc4e-4c14-be87-f8e06ae8114f" class="">Find out about the company’s values.</p></div><div id="4c25022e-926a-4bcb-8a1d-40c7daaadaf0" style="width:25%" class="column"><p id="e94739dc-f122-4e74-a9a6-412d16414ba8" class=""><strong>Goal 4</strong></p><p id="e97ead05-79aa-4a82-9b3e-d5ae79996cf3" class="">Find out about the current employee experience at the company.</p></div></div><figure id="e4f145e0-5cab-406d-bbf9-bdb9a44267af" class="image"><a href="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Frame20120(2).png"><img style="width:13782px" src="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Frame20120(2).png"/></a></figure><p id="f0586ad9-41fb-4bf2-b591-278e0ed5e829" class=""><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em>The user path for goal 3, find out about the company’s values.</em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></p><p id="41095476-f0bb-4adc-b198-3d7fc75084ba" class="">
-    </p><h3 id="16a4f880-6594-4d92-8dde-e3a01857c236" class="">Heuristic Analysis</h3><p id="0a24c9ec-5f1f-450e-a3f2-03729027853a" class="">A heuristic analysis was conducted to look at how easy the user interface was to use on five of the most important web pages.</p><figure id="fc7d9fb5-5a56-42e2-b098-fe424ff9db4d" class="image"><a href="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Heuristic20Evaluation-20Homepage.png"><img style="width:5310px" src="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Heuristic20Evaluation-20Homepage.png"/></a></figure><p id="f7f24c78-04e0-4663-85f2-e2b8c0f881f4" class=""><em><em><em><em><em><em><em>The heuristic analysis on the ‘work with us’ section on the homepage.</em></em></em></em></em></em></em></p><p id="9a79d866-d5e3-4863-9786-ed1d7fa2fe9c" class="">
-    </p><h3 id="4e1b7fb8-7330-4f00-8b70-0c7ce2a0967d" class="">Usability Testing</h3><p id="96d8a39a-e824-46ec-8b86-dc36688bf7b8" class="">Five user tests were conducted (the number Jakob Nielson recommends to show 85% of usability problems) with the objective of discovering any usability problems when researching the CBC Website to see if you want to work at the company.</p><p id="6a7bd16e-922e-475c-be68-80ce7ade671c" class="">We set participants three tasks based on the heuristic analysis results to see how users interacted with the webpages we identified as having a lower standard of usability:</p><div id="ba736705-71ba-49fa-8cd9-f7bb743d49f6" class="column-list"><div id="af280362-f2b4-4bf0-8ad4-921e9131cb81" style="width:33.33333333333333%" class="column"><ol type="1" id="59d9f81d-f893-4a50-85dd-88385d059eab" class="numbered-list" start="1"><li>Find out more about the history of CBC</li></ol></div><div id="4eeadb72-8bc2-4c41-92c5-5f3bdad5388c" style="width:33.33333333333333%" class="column"><ol type="1" id="9a3dbe76-55e9-46d7-ac91-1cc3ce2c1794" class="numbered-list" start="2"><li>Discover what the company values are</li></ol></div><div id="eda26011-1c64-4543-ba50-1b268c80ca85" style="width:33.33333333333333%" class="column"><ol type="1" id="62252f13-4d12-4338-afb7-711fa51655e5" class="numbered-list" start="3"><li>Find out what its like to work at the company</li></ol></div></div><p id="c620ba57-75b8-4a3f-a12d-e7e6989dc3be" class="">
-    </p><p id="acccbb7a-9100-4734-a441-ed03ce8f3332" class="">Usability Problems found from the testing include:</p><ul id="db5abfe9-e34d-4958-afdc-430c439dd787" class="bulleted-list"><li style="list-style-type:disc">Unable to see a values page in the navigation bar</li></ul><ul id="a26f95c9-0177-4324-8881-a9426f8327e6" class="bulleted-list"><li style="list-style-type:disc">Confusion with non-clickable areas on the homepage</li></ul><ul id="2362edf3-5de9-4325-bb16-c57ab04e740e" class="bulleted-list"><li style="list-style-type:disc">Disconcerted with the lack of information and lots of blank space on the <em>About Us</em> page, instead, the information is in a pdf that doesn’t have a contents page</li></ul><p id="0700d138-77f8-40ed-a285-c1ae35df4896" class="">
-    </p><h3 id="46a21c0a-cc3d-4daa-93ac-df8f35639241" class="">User Testing Prioritisation Matrix</h3><p id="e27142c4-8d6a-4060-a5f2-8154c6ef98fe" class="">We gathered the testing results and put them on a prioritisation matrix for the user and company.</p><p id="148c210e-eb76-4adf-a45d-f689c864eaf5" class="">The highest priority issue for users and the business was to fix the navigation to the values page.</p><figure id="1258f356-e7c3-47cb-8ab8-c09a6988d717" class="image"><a href="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/PERSONAL_fig_jam_website_stuff_(2).png"><img style="width:8902px" src="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/PERSONAL_fig_jam_website_stuff_(2).png"/></a></figure><p id="24a1f615-5543-42f1-b62d-779c9088913d" class=""><em><em><em>The User Testing Prioritisation Matrix based on importance for the User and Company.</em></em></em></p><p id="dc107e04-b1eb-4cbf-bc37-7f6664d7232c" class="">
-    </p><p id="985ab975-c3c6-44e4-b3a7-2324581b4ff0" class="">
-    </p><p id="04217b68-5537-43be-a645-90b4940fbeb0" class=""><a href="https://www.notion.so/Government-Website-Redesign-feeca5490e074e55b6ca02fe568226ac?pvs=21">back to top</a></p><h2 id="0e4a8418-377e-446d-aff6-00872edcd9e7" class="">Information Architecture</h2><hr id="99a473bf-fba7-4bc1-adc6-a93b0fd16a71"/><h3 id="97bcc515-478e-4707-827d-5244452aede0" class=""><strong>Navigation Heuristic Analysis</strong></h3><p id="be4803e6-ea59-4b58-b363-62314eee8292" class="">To fix the most important usability issue found, the navigation to the values page, I firstly analysed the whole of the website navigation to analyse what the organisational principles were and discover any other usability issues.</p><p id="b4614b6d-cac2-4fd8-b7a9-3318bd3356ab" class="">
-    </p><p id="b392f528-bc84-407d-a5e5-f724ab013b4f" class="">Main Takeaways:</p><ul id="3f2e7e4f-c704-43e0-9d3a-f5ecdf0cf47a" class="bulleted-list"><li style="list-style-type:disc">The organisational structure was hierarchal across the navigation</li></ul><ul id="df7d6ad8-83a1-4cdc-aef5-4582e107ee4c" class="bulleted-list"><li style="list-style-type:disc">The logo on the primary navigation bar enables users to go to the homepage however they have to recognise the logo as the company name is only the footer.</li></ul><ul id="2f59a391-978a-4fc8-998b-f66202072c06" class="bulleted-list"><li style="list-style-type:disc">The UI is clear with a hover function to let users know where they are navigating</li></ul><ul id="b72b7389-5dc9-4748-8bbd-cd50a174aa9f" class="bulleted-list"><li style="list-style-type:disc">The naming and structure within the secondary and tertiary navigation was unclear with some pages names duplicated but taking users to separate pages (<em>Mandate, FAQ</em>) and other pages missing and other pages in unexpected places, eg. <em>Local News Directory </em>page was in the Impact and Accountability Tab.</li></ul><p id="4143845c-91c8-4716-be0f-d87e8fad4c47" class="">
-    </p><h3 id="e06daf72-5cee-4aa8-a23b-92d9cc0a3dea" class="">Navigation Usability Testing</h3><p id="a9c86f90-7673-4627-8a28-372303bbf648" class="">Testing was conducted on the desktop and mobile websites to discover any issues when navigating the website and confirm that users struggled to find the values page – the highest priority issue found in initial user testing.</p><p id="a49ec178-bca0-4d72-b4fc-6644ab2788cd" class="">
-    </p><p id="46316ff2-7015-4a74-a8f6-0717bb8db30b" class="">Tasks and Results</p><ol type="1" id="eb5daf31-29cb-45c6-9fea-bd3274fe6486" class="numbered-list" start="1"><li>Find the Our Values and Ethics Commissioner Page<ul id="9552759c-cfe5-47f0-b45d-63e97794ec4f" class="bulleted-list"><li style="list-style-type:disc">All participants expected this page to be in the vision tab, not the impact and accountability tab.</li></ul></li></ol><ol type="1" id="a2c56dbe-2cd7-456d-8814-ebe7944327ee" class="numbered-list" start="2"><li>Go back to the Homepage<ul id="1ec5186f-89c4-466b-a366-9328c7c05332" class="bulleted-list"><li style="list-style-type:disc">Participants used various ways to complete this task.</li></ul><ul id="1580f28c-dc8c-429c-b7ee-064300120031" class="bulleted-list"><li style="list-style-type:disc">Either via the logo, the breadcrumb or by pressing return on the browser window.</li></ul></li></ol><ol type="1" id="d5d37079-aa36-4933-b0bc-59d8e8d6fbdd" class="numbered-list" start="3"><li>Find the Current Job Openings Page<ul id="607f7182-3491-4af1-ae2c-ff06ad5641aa" class="bulleted-list"><li style="list-style-type:disc">All participants found this easily via the work with us tab.</li></ul></li></ol><ol type="1" id="7b0cdfb1-2181-43d8-91dc-8e394f2ae05a" class="numbered-list" start="4"><li>Find the main FAQ page<ul id="4a4c2257-5fa3-408f-81fd-0fd8282bc113" class="bulleted-list"><li style="list-style-type:disc">The Users in mobile view found the main FAQ page.</li></ul><ul id="9fb33d9c-62d2-42a6-a220-f9d8694b0a7b" class="bulleted-list"><li style="list-style-type:disc">Desktop viewers expected the page to be in the secondary navigation not in the utility bar and either used search or went to the Ethics and Values Commissioner FAQ page.</li></ul><p id="49d5df0e-8f03-4ea4-8012-2b9f1dcfabdb" class="">
-    </p></li></ol><h3 id="81b2f32b-158c-4fc3-bc65-00a34ff910c5" class="">Card Sorting</h3><p id="8b6ba584-08df-43cb-b55a-9c4026fac777" class="">Open card sorting was done to redesign the navigation in three stages.</p><p id="356206b5-532c-458c-af09-ae2d6ac836f7" class="">Stage 1:</p><ul id="a35b1919-9e64-42d7-a10b-9e59e57d1fd3" class="bulleted-list"><li style="list-style-type:disc">Noted down all the pages in the navigation bar and some pages that should be in the navigation bar but currently not, eg. <em>Our Values,</em> on cards.</li></ul><ul id="ca91724f-b5a6-4636-b97d-56cdb88bf888" class="bulleted-list"><li style="list-style-type:disc">Renamed pages I thought were unclear, eg. <em>Greening our Story</em> was renamed to <em>Environmental Strategy</em></li></ul><ul id="2e1e6650-7da0-4742-8079-4e90dff41a8b" class="bulleted-list"><li style="list-style-type:disc">Excluded some pages in the navigation bar that only took you to external websites, eg. <em>#Not Okay</em>. I would provide a link to this on a different page.</li></ul><ul id="e05dd536-15a5-40d3-83f7-b1f999acebd8" class="bulleted-list"><li style="list-style-type:disc">Combined pages that had limited content on them or only pdf content, eg. 2019-2024, 2020, 2015 strategy plans pages combined into one overall <em>Strategy Plans</em> page.</li></ul><p id="3ba426ea-63be-4b63-9315-60177956fbac" class="">
-    </p><p id="38f0cc0e-c04e-41f6-bcbb-4a355a39adc3" class="">Stage 2:</p><ul id="d03024cf-88ff-4ea8-93cc-bd06166a8f75" class="bulleted-list"><li style="list-style-type:disc">Sorted cards I thought were similar into groups.</li></ul><p id="54f1a6bf-1e4c-471d-860c-1276157045e5" class="">
-    </p><p id="82374a12-5f59-4107-80dc-8b997e864b11" class="">Stage 3:</p><ul id="07ac8c1f-edde-4a54-aa76-fa74ae4a6aef" class="bulleted-list"><li style="list-style-type:disc">Labelled Categories and sorted the groups further.</li></ul><p id="ecc78a00-0ba9-487f-8fd4-6179a344e3f3" class="">
-    </p><figure id="29eeb011-6070-4a83-a0f5-99bd1eab3f4a" class="image"><a href="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Card_Sorting_(1).png"><img style="width:5500px" src="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Card_Sorting_(1).png"/></a></figure><figure id="68874934-a500-46d2-b743-def18d873601" class="image"><a href="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Card_Sorting_(2).png"><img style="width:4968px" src="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Card_Sorting_(2).png"/></a></figure><figure id="d5d63747-e64c-4926-8374-5a6c01ede138" class="image"><a href="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Card_Sorting_(3).png"><img style="width:5264px" src="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Card_Sorting_(3).png"/></a></figure><figure id="9ed34084-7abc-406f-b1e2-79741f234199" class="image"><a href="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Card_Sorting_(4).png"><img style="width:1472px" src="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Card_Sorting_(4).png"/></a></figure><p id="a81041d2-293b-489f-8e1c-d817dd34152a" class=""><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em>The three stages of card sorting, with a focus in on the new values group. </em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></p><p id="7b37ea54-8e87-4841-ba92-5a7aee53bb34" class="">
-    </p><h3 id="415ea6f1-0f23-48de-91e1-3f329be72b76" class="">Sitemap</h3><p id="64ade050-4adc-42de-b4f7-5b035007a8ad" class="">I then took the card sorting results and made a new sitemap for the website using a hierarchical organisational structure.</p><figure id="d656c0e8-06e1-470c-a40b-5b08c0731cb1" class="image"><a href="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Frame_1_(3).png"><img style="width:3207px" src="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Frame_1_(3).png"/></a></figure><p id="634f0ce8-ca82-42e3-bd2b-82d294c8a9ba" class=""><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em>The new sitemap I created.</em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></p><p id="4542cd08-25cf-4823-87b3-043f97a3f3bb" class="">
-    </p><p id="b405f1f5-418b-4ac7-878c-5b456b3ade93" class=""><a href="https://www.notion.so/Government-Website-Redesign-feeca5490e074e55b6ca02fe568226ac?pvs=21">back to top</a></p><h2 id="49d8fa2a-37f1-40e8-902e-37696cef8f29" class="">Redesign and Testing </h2><hr id="d9390c86-1a85-45d2-b554-780cfcf08d1d"/><h3 id="58c8b16b-eb22-4f72-b350-b4d18243d035" class="">Navigation Wireframes</h3><p id="8eda73f5-dc0a-43f3-88f4-0d86730c2376" class="">As found in the heuristic analysis, the UI of the CBC-Radio website is consistent and has a clear design so I decided not to change the UI. Instead, I updated the mobile and website navigation bar with the new sitemap and also added the company name on the website version, an issue found in the initial usability testing.</p><figure id="ad3562d7-aeb1-47e3-9654-1f010dfb07dd" class="image"><a href="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Frame_29.png"><img style="width:5634px" src="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Frame_29.png"/></a></figure><p id="60111a08-6804-4a01-a388-e37aa131cda7" class=""><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em>The initial mobile and desktop navigation wireframes.</em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></p><p id="59c28fc7-d5f6-4c14-b3dc-a3f742ff1fde" class="">
-    </p><h3 id="bb371b8b-4cca-4287-bd35-60ae78f3d61e" class="">Homepage Wireframes</h3><p id="bb2cc15e-00d1-4ea8-b949-3b12e1a61079" class="">I began by sketching out the homepage design and then making low-fidelity wireframes, I kept it fairly similar to the original UI but did make some changes to make the experience clearer from testing results and heuristic analysis.</p><p id="50508698-9009-45a2-a1f5-62e6dcd16cbe" class="">
-    </p><p id="54a6a26c-03da-484d-b304-69b8ad0e13e3" class="">Changes made:</p><ul id="3472cb8b-4633-48f2-b8f6-26638c1fbfe8" class="bulleted-list"><li style="list-style-type:disc">Iterated the desktop navigation bar to match the mobile UI</li></ul><ul id="1a0e3721-b784-4d96-b349-4efc22d05d3f" class="bulleted-list"><li style="list-style-type:disc">Added a heading in the news section</li></ul><ul id="100158c9-7f81-4436-b7ec-2d61acb34b94" class="bulleted-list"><li style="list-style-type:disc">Changed the work with us template to make the individual pictures clickable and design more consistent with the rest of the elements</li></ul><ul id="99b49931-7cf3-410e-8dd6-97141035f920" class="bulleted-list"><li style="list-style-type:disc">Added a carousel to the milestone section</li></ul><p id="8dae8b7b-4fc1-45b5-8910-4a405802ee22" class=""><div class="indented"><figure id="eb19afb9-ca9c-4999-9780-d953ae148711" class="image"><a href="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Frame202820(2).png"><img style="width:12594px" src="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Frame202820(2).png"/></a></figure><figure id="65c9b4ee-ce57-4e28-b061-b158804c195d" class="image"><a href="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Frame_28_(1).png"><img style="width:5355px" src="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Frame_28_(1).png"/></a></figure></div></p><p id="ab727b68-598e-43c9-bf58-fc83a10438cb" class=""><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em>The initial desktop and mobile homepage wireframes.</em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></p><p id="73fb4c5b-994f-4992-ae88-6c60987c0315" class="">
-    </p><h3 id="318f9899-3c33-4e23-b886-3f22c3c89595" class=""><strong>5 Second Desktop Usability Testing</strong></h3><p id="193cd21d-36a0-431b-afc5-2df5878cc57a" class="">I carried out five-second usability tests to gather the initial reaction to the UI from users.</p><p id="7d2ba88e-d865-43ac-8c4c-cba97baacc73" class="">
-    </p><p id="8c3c58c2-066e-4086-bf69-b1149198e866" class="">Main Takeaways</p><ul id="85ee5f86-40d8-4815-9a58-2d66ecaf29b4" class="bulleted-list"><li style="list-style-type:disc">The website site map made sense</li></ul><ul id="a9953c93-3f36-4e88-8736-772966bbb9f9" class="bulleted-list"><li style="list-style-type:disc">Liked the navigation and button hover and clicking states and overall block style</li></ul><ul id="4081dc08-f883-4d04-9d65-0e80a35d74ea" class="bulleted-list"><li style="list-style-type:disc">Suggested making it clearer that the language is currently English and can move to French in the navigation bar</li></ul><ul id="45b72810-3876-46e6-b623-00976062a31e" class="bulleted-list"><li style="list-style-type:disc">Suggested changing the copy in the milestones button to make clearer what users are going too</li></ul><p id="1b56bce7-08c2-4a7f-9c2b-5153b657f369" class="">
-    </p><h3 id="6ef76d0d-198e-4ee0-8edb-caa9a176f5e3" class="">Iteration after Testing</h3><figure id="9722732b-6db1-45c3-901c-8b6bb09bf046" class="image"><a href="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Frame_30.png"><img style="width:3912px" src="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Frame_30.png"/></a></figure><figure id="fcd06c80-b512-4a5d-b914-dab995c2ef90" class="image"><a href="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Frame_28_(4).png"><img style="width:6966px" src="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Frame_28_(4).png"/></a></figure><p id="9eb68630-e3ee-4c65-a84b-e872f6c745d0" class=""><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em>The changes made after the Feedback from the five second Desktop Usability Testing.</em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></p><p id="5cc8d194-bbf1-442a-a51e-e3e5f2cf2fbb" class="">
-    </p><h3 id="655a38ff-3aca-474d-8963-336b955bfc7f" class="">UI Style Guide </h3><p id="703f47c7-83a8-4300-9776-c4d8abd245ae" class="">I created a style guide using atomic design principles to use on the website. I chose a sans-serif text for readability and kept the original black white and red colours to match the logo. I also made content cards and indicated whether the card was clickable with a red highlight on the text.</p><figure id="5131126f-aee2-46fb-afac-2fe43e87e497" class="image"><a href="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Frame_52_(1).png"><img style="width:7077px" src="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Frame_52_(1).png"/></a></figure><p id="541fb42a-e7e9-4bbc-ad1e-92336c3713c7" class=""><em><em><em><em><em><em><em><em><em><em><em><em>A sample of the style guide.</em></em></em></em></em></em></em></em></em></em></em></em></p><p id="ec3d5082-792b-4ec8-a658-b1007469ca32" class="">
-    </p><h3 id="b43ced2d-817c-4a3f-aeba-ba9d9f3b3230" class="">Mobile Wireframe Progression</h3><figure id="b5b70a1e-87c6-4de1-999e-e41d12a3795e" class="image"><a href="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Frame_47_(3).png"><img style="width:5655px" src="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Frame_47_(3).png"/></a></figure><p id="8c91ce7d-9c16-4c93-94e2-91775d7a3f48" class=""><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em>A sample of the mobile high-fidelity wireframes created. I firstly made mock-ups of the page using the style guide and then added the real content.</em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></p><p id="ec28b71e-eac6-46fe-b8bc-65f772586de3" class="">
-    </p><h3 id="2fc41774-f156-4714-93c7-3618368c373c" class="">Desktop Wireframe Progression</h3><figure id="2fd86827-76af-4345-a929-c74678bfbe93" class="image"><a href="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Frame_46.png"><img style="width:18000px" src="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Frame_46.png"/></a></figure><p id="7b47c742-dcf2-4d36-9ae9-2216dd16b3bb" class=""><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em>A sample of the desktop high-fidelity wireframes created. I firstly made mock-ups of the page using the style guide and then added the real content.</em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></p><p id="62e57886-60bc-4e91-bc48-eafd9f3fcd5d" class="">
-    </p><h3 id="8b4ac5c0-3da0-4a84-aced-419ed071c7bd" class="">High Fidelity User Testing</h3><p id="72f04fb9-dfb7-49fd-9249-c545c6917ead" class="">After completing the high-fidelity wireframes I made them into clickable prototypes to do some final usability testing to identify any usability issues when navigating the CBC website and identify what users like and do not like about the design of the website.</p><p id="17dc0374-a7ed-4068-abb1-99d46b262ea2" class="">
-    </p><p id="4ec01dfd-bf02-4674-94ef-bab530b18053" class="">Participants had four tasks:</p><ol type="1" id="dc758367-ad3d-4a80-890e-b524ef7157cc" class="numbered-list" start="1"><li>Please find the Trust, Democracy and Your Public Broadcaster Blog Page</li></ol><ol type="1" id="45add45b-f67f-4bda-9092-13aeac8d8721" class="numbered-list" start="2"><li>Please stay on this page and go back to the Homepage</li></ol><ol type="1" id="2872811d-7d24-4b39-a232-d90185377750" class="numbered-list" start="3"><li>Find the page where you would discover what it is like to work for the company</li></ol><ol type="1" id="02aaca37-323a-4765-80a8-19efa334d9c2" class="numbered-list" start="4"><li>Please find and tell me the four company values</li></ol><p id="5168e952-d0ab-41cf-9076-5c71091642cb" class="">
-    </p><p id="886b6849-c90c-49e0-a748-b108d3fe888a" class="">Results</p><table id="58710908-4dd5-4e04-9fe3-88cd92a12e6d" class="simple-table"><thead class="simple-table-header"><tr id="d11ec8bf-4c34-4db2-987b-cb2ae9adb8c9"><th id="{jhB" class="block-color-red_background simple-table-header">Task</th><th id="n&lt;Lq" class="block-color-red_background simple-table-header">Mobile Success Rate</th><th id="uRn^" class="block-color-red_background simple-table-header">Desktop Success Rate</th></tr></thead><tbody><tr id="17aa571c-cfeb-4e4a-a0a1-a27592243b3c"><td id="{jhB" class="">1</td><td id="n&lt;Lq" class="">80%</td><td id="uRn^" class="">50%</td></tr><tr id="26f2f07f-b829-47a6-b406-c8a8c4bdfd70"><td id="{jhB" class="">2</td><td id="n&lt;Lq" class="">70%</td><td id="uRn^" class="">83%</td></tr><tr id="1881ee31-6f61-46d1-9945-e25a8f23f8a5"><td id="{jhB" class="">3</td><td id="n&lt;Lq" class="">80%</td><td id="uRn^" class="">100%</td></tr><tr id="3ddad9fe-aa8b-400d-a299-79ba223038fb"><td id="{jhB" class="">4</td><td id="n&lt;Lq" class="">90%</td><td id="uRn^" class="">100%</td></tr></tbody></table><h3 id="83e377bc-3949-4c04-8535-e08d7d81536d" class="">Iteration After Testing</h3><p id="27a9581d-d5b4-442e-a960-b931d959fe42" class="">I made the ‘CBC Canada-Radio’ text clickable on both mobile and desktop and ensured all the home buttons on the primary navigation directed to the homepage as a few users initially tried to click on the text to go to the homepage.</p><figure id="b183823d-282c-4563-a504-a2482a799d65" class="image"><a href="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/unnamed.png"><img style="width:512px" src="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/unnamed.png"/></a></figure><figure id="ee9d3863-4de0-46e5-9acb-b8c1e7f537e5" class="image"><a href="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/unnamed-2.png"><img style="width:492px" src="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/unnamed-2.png"/></a></figure><p id="8dd33ed2-eb8c-4bd0-9dbf-e6f8515f1917" class=""><em>A screenshot of all the clickable links to the homepage on mobile and desktop. </em></p><p id="b87c66c9-812f-4ac4-a003-a8239720b194" class="">
-    </p><p id="6b256033-3f26-4f4c-b0ee-cc56ac7d99ff" class="">I had feedback from testing that the content seemed a bit crowded. I believe this was a cause of the completion rates being lower on some of the tasks as users missed content when they scrolled past because there was so much of it. Therefore I iterated the UI with the aim to give better balance and make the content less overwhelming.</p><p id="96a55f61-b02c-4aa3-af90-1dd50743a610" class="">
-    </p><p id="c9e65ee3-6273-4422-ab9c-6b8d12780b74" class="">Changes made to give better balance and make the content less overwhelming:</p><ul id="b8cec56d-006b-4f37-8da1-882391bff851" class="bulleted-list"><li style="list-style-type:disc">Increased the spacing within cards</li></ul><ul id="48714f0d-9949-4e28-aeb3-ae081c5f9041" class="bulleted-list"><li style="list-style-type:disc">Decreased the text size in the CTA buttons</li></ul><ul id="276ca927-efca-43a5-b53d-81e4a6062c32" class="bulleted-list"><li style="list-style-type:disc">Increased the spacing within templates</li></ul><ul id="7da2eb64-2c3a-440e-9221-0073d21cbc09" class="bulleted-list"><li style="list-style-type:disc">Gave images in cards a fixed height</li></ul><ul id="88a378bf-6d2d-4ca9-8468-4c1dfaf7283b" class="bulleted-list"><li style="list-style-type:disc">Blank space was introduced to keep card height the same in horizontal layouts</li></ul><p id="7485b435-19e4-4484-b008-979e819d29b4" class="">
-    </p><figure id="645ce325-a37a-4dfc-9554-7ff92ea7a2e7" class="image"><a href="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Frame_51.png"><img style="width:3840px" src="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Frame_51.png"/></a></figure><figure id="87c1f111-7b82-4f64-b4cc-0616bc7b7049" class="image"><a href="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Frame_50.png"><img style="width:3840px" src="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/Frame_50.png"/></a></figure><p id="4f1d4cfc-af8b-4c4a-a8bb-5c15658b0ecb" class=""><em>Screenshots of the milestones template on the desktop homepage before and after iteration. The spacing has increased throughout, the images are the same height and the CTA button text size has decreased to give better balance and make the content less overwhelming. </em></p><p id="7a297cc8-26e5-402e-9f44-8313f0c7c0ce" class="">
-    </p><p id="d34597b3-c5da-4584-8c75-441281b2edd0" class=""><a href="https://www.notion.so/Government-Website-Redesign-feeca5490e074e55b6ca02fe568226ac?pvs=21">back to top</a></p><h2 id="1442d16e-de2c-4d4d-857b-93d9f6883450" class="">Conclusion</h2><hr id="25454f38-882f-4b89-8bcb-697ebca9a1b3"/><h3 id="9827f597-d0e7-461e-a1ca-ebde27df82e9" class="">Final Prototype</h3><figure id="0cdadbe9-80b2-48a5-a825-df8cd25a0f8f"><div class="source"><a href="Government%20Website%20Redesign%20feeca5490e074e55b6ca02fe568226ac/CBC-Radio_Canada_desktop_prototype.mov">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/deeda773-9fa0-4066-8d4c-3a17129f5f20/CBC-Radio_Canada_desktop_prototype.mov</a></div></figure><p id="8cb289f2-0e0e-4737-8188-5224726a5e98" class="">A video of t<em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em>he final desktop prototype in use. </em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></p><p id="b7799a3d-8894-4ddf-bb3f-0eb3aafa0e32" class="">
-    </p><h3 id="29387fad-6f08-4602-9f48-2ec11b503fc3" class="">Next Steps</h3><ul id="3fa2f65b-f9e4-48ea-be1b-2ffa36338723" class="bulleted-list"><li style="list-style-type:disc">I didn’t have time to carry out card sorting on users during the project so I would do this to understand users’ mental models and iterate the navigation further to make it easier to use.</li></ul><ul id="56cf9707-43c9-49b1-aaea-04baea51995d" class="bulleted-list"><li style="list-style-type:disc">I would test my iterated prototypes again to see if the design changes increased the success rate and make more changes accordingly.</li></ul><ul id="52c55acc-cd3e-4b9a-9b46-f1d3613270bd" class="bulleted-list"><li style="list-style-type:disc">I would be interested to do A/B testing on the original values page and my redesigned page to see which page users gained more information from.</li></ul><p id="84e653f3-96d7-49a4-9b5f-03dc96ca8b7e" class="">
-    </p><p id="87af3edc-da61-457b-9e39-3a1e2bb0e4df" class="">
-    </p><p id="8a26d558-83b3-4d5c-9e89-7facec9209a5" class=""><a href="https://www.notion.so/Government-Website-Redesign-feeca5490e074e55b6ca02fe568226ac?pvs=21">back to top</a></p></div></article>
+    <!--Note about not finished!-->
+    <div id="warningText">
+        <h4>Hello, I am currently updating my portfolio and am yet to convert this page from its orginial notion format to my website styling. Please come back soon to see the updated case study style!</h4>
+        <h4>In the meantime, below is the case study on notion. If you would prefer to, you can go to the page directly <a href="https://www.notion.so/Government-Website-Redesign-feeca5490e074e55b6ca02fe568226ac?pvs=4" target="_blank">here</a>.</h4>
+    </div>
+
+    <!--iFrame-->
+    <div id="frameBorder">
+        <iframe src="https://www.notioniframe.com/notion/wgeyffc6nk" style="display: block; width: 90%; height: 100vh; border: 0; padding: 0; margin: 0 auto"></iframe>
+    </div>
+
+    <!--Thank you-->
+    <div id="thankYouText">
+        Thank you for reading this case study!
+    </div>
+
+    <!--CTA Buttons-->
+    <div class="CaseStudyCTAButtonContainer projectButton">
+        <a href="index#projectSection">
+            <button>See Projects</button>
+        </a>
+        <a href="about">
+            <button>About Me</button>
+        </a>
+    </div>
+
 
     <!--Footer-->
     <footer>
