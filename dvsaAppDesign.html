@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Case Study</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        #warningText {
+            width: 80%;
+            max-width: 800px;
+            margin: 1.8em auto 4em;
+            background-color: #F3B56C;
+            padding: 1em 1.8em;
+        }
+
+        #warningText a {
+            text-decoration: underline;
+        }
+
+        #frameBorder {
+            background-color: #BBDDEC;
+            padding: 4em 0;
+        }
+
+        .CaseStudyCTAButtonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+    margin: 2em auto 2em;
+}
+
+@media screen and (max-width: 600px) {
+    .CaseStudyCTAButtonContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 3em;
+    }
+}
+
+#thankYouText {
+    font: 500 1.25rem 'Heebo', 'Arial', 'Sans Serif';
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+    </style>
+</head>
+<body>
+    <!--Navigation-->
+    <nav>
+        <div class="header">
+            <div class="logo">
+                <a href="https://jennyhilldesign.co.uk">JH</a>
+            </div>
+            <div class="ToggleIcon">
+                <img id="menuIcon" src="images/menu.svg" alt="menu button">
+                <img id="crossIcon" src="images/cross.svg" alt="cancel button">
+            </div>
+        </div>
+        <div class="navContainer">
+            <ul class="primaryNavigationContainer">
+               <li><a href="https://jennyhilldesign.co.uk" id="primaryLogo">JH</a></li>
+                <li ><a href="https://jennyhilldesign.co.uk">Portfolio</a></li>
+                <li><a href="about">About</a></li>
+                <!-- Make public when have stuff to say on zines page! <li><a href="zines">Zines</a></li>-->
+            </ul>
+            <ul class="navigationIconsContainer">
+                <li><a href="pdf/Jenny Hill Portfolio CV.pdf" target="_blank">
+                    <img class="icon" id="CVNavIcon" src="images/cv.jpg" alt="cv icon">
+                </a></li>
+                <li><a href="https://linkedin.com/in/jenny-e-g-hill" target="_blank">
+                    <img class="icon" id="LinkedInNavIcon" src="images/linkedin.jpg" alt="LinkedIn icon">
+                </a></li> 
+            </ul>
+        </div>
+    </nav>
+    <!--Note about not finished!-->
+    <div id="warningText">
+        <h4>Hello, I am currently updating my portfolio and am yet to make a full case study of this project. However, I do have a pdf of a presentation my team and I gave embeded below. Please come back soon to see the updated case study!</h4>
+    </div>
+
+    <!--iFrame-->
+    <div id="frameBorder">
+        <iframe src="pdf/DVSA Redesign.pdf" style="display: block; width: 90%; height: 100vh; border: 0; padding: 0; margin: 0 auto"></iframe>
+    </div>
+
+    <!--Thank you-->
+    <div id="thankYouText">
+        Thank you for reading this case study!
+    </div>
+
+    <!--CTA Buttons-->
+    <div class="CaseStudyCTAButtonContainer projectButton">
+        <a href="index#projectSection">
+            <button>See Projects</button>
+        </a>
+        <a href="about">
+            <button>About Me</button>
+        </a>
+    </div>
+
+
+    <!--Footer-->
+    <footer>
+        <div class="footerIconsContainer">
+            <a href="mailto:j.hill99@hotmail.co.uk">
+                <img class="icon" src="images/email.jpg" alt="email icon">
+            </a>
+            <a href="pdf/Jenny Hill Portfolio CV.pdf" target="_blank">
+                <img class="icon" src="images/cv.jpg" alt="cv icon">
+            </a> 
+            <a href="https://linkedin.com/in/jenny-e-g-hill" target="_blank">
+                <img class="icon" src="images/linkedin.jpg" alt="LinkedIn icon">
+            </a>
+        </div>
+        <div class="copyrightTextContainer">
+            <p>
+                Website Design and Content &copy 2023 Jenny Hill
+            </p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="nav.js"></script>
+</body>
+</html>
