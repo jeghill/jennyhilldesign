@@ -194,6 +194,7 @@ margin-top: 0;
 
 .projectImg img {
     max-width: 100%;
+    object-fit: contain;
 }
 
  .projectButton button {
